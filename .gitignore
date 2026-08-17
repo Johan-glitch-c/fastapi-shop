@@ -1,0 +1,133 @@
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+
+# Logs
+pip-log.txt
+pip-delete-this-directory.txt
+*.log
+
+# Testing / coverage
+.tox/
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# =========================
+# Environment
+# =========================
+
+.env
+*.local
+
+# =========================
+# Databases
+# =========================
+
+db.sqlite3
+shop.db
+
+# =========================
+# Django
+# =========================
+
+media/
+staticfiles/
+
+# =========================
+# Celery
+# =========================
+
+celerybeat-schedule*
+celerybeat-schedule-wal
+
+# =========================
+# Node / Frontend
+# =========================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+dev-dist/
+dist/
+dist-ssr/
+coverage/
+*.tsbuildinfo
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# =========================
+# IDE
+# =========================
+
+.idea/
+.vscode/
+!.vscode/extensions.json
+
+# Visual Studio
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# =========================
+# OS
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# Other
+# =========================
+
+.site/
+.ropeproject/
+.spyderproject
+.spyproject
