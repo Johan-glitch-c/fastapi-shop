@@ -34,7 +34,7 @@ class CartService:
 
     def remove_from_cart(self, cart_data: Dict[int,int], product_id: int ) -> Dict[int, int]:
         if product_id not in cart_data:
-            raise HTTPException(staus_code=status.HTTP_404_NOT_FOUND, detail="Product with id {product_id} not found")
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product with id {product_id} not found")
 
 
         del cart_data[product_id]
