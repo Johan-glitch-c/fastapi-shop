@@ -10,14 +10,14 @@ class ProductRepository:
         self.db = db
 
     def get_all(self) -> List[Product]:
-        return self.db.query(Product).options(joinedload(Product.category).all())
+        return self.db.query(Product).options(joinedload(Product.category)).all()
 
 
     def get_by_id(self, product_id: int) -> Product:
         return self.db.query(Product).options(joinedload(Product.category)).filter(Product.id == product_id).first()
 
     def get_by_category(self, category_id: int) -> Product:
-        return self.db.query(Product).optionsjoinedload(Product.category).filter(Product.category_id == category_id).all()
+        return self.db.query(Product).options(joinedload(Product.category)).filter(Product.category_id == category_id).all()
 
 
     def create(self,product_data: ProductCreateSchema) -> Product:

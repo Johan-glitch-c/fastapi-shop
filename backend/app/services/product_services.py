@@ -12,7 +12,7 @@ class ProductService:
         self.category_repository = CategoryRepository(db)
 
     def get_all(self) -> List[ProductResponseSchema]:
-        products = self.repository.get_all()
+        products = self.product_repository.get_all()
         product_response=[ProductResponseSchema.model_validate(product) for product in products]
         return ProductListResponseSchema(product=product_response,total=len(products))
 

@@ -29,7 +29,7 @@ class ProductResponseSchema(BaseModel):
 
 
     class Config:
-        form_attributes=True
+        from_attributes=True
 
 class ProductListResponseSchema(BaseModel):
     product: list[ProductResponseSchema]
