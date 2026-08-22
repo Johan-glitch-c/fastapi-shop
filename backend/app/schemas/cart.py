@@ -26,6 +26,6 @@ class CartItemSchema(BaseModel):
 
 
 class CartResponseSchema(BaseModel):
-    items: list[CartItemCreateSchema] = Field(..., description="list of cart items")
+    items: list[CartItemSchema] = Field(..., description="list of cart items")
     total: float = Field(..., description="Total price in cart")
     items_count: int = Field(..., description="Number of items in cart")

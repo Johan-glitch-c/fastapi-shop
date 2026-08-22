@@ -6,7 +6,7 @@ from ..repositories.product_repository import ProductRepository
 
 
 class CartService:
-    def _init__(self, db: Session):
+    def __init__(self, db: Session):
         self.product_repository = ProductRepository(db)
 
     def add_to_cart(self, cart_data: Dict[int, int], item: CartItemCreateSchema) -> Dict[int, int]:
@@ -15,7 +15,7 @@ class CartService:
         if not product:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product with id {product_id} not found")
 
-        if item.product_id not in cart_data:
+        if item.product_id in cart_data:
             cart_data[item.product_id]+=item.quantity
 
         else:
@@ -66,5 +66,5 @@ class CartService:
                 total_items+=quantity
 
 
-        return CartResponseSchema(items=cart_items, total=total_price, items_count=total_items)
+        return CartResponseSchema(items=cart_items, total=round(total_price), items_count=total_items)
 
